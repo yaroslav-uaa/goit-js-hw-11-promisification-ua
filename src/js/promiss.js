@@ -30,19 +30,19 @@ const toggleUserState = (allUsers, userName) => {
   });
 };
 
-const loggerTask2 = updatedUsers => console.table(updatedUsers);
+const loggerTask = updatedUsers => console.table(updatedUsers);
 
 /*
  * Зараз працює так
  */
-// toggleUserState(users, 'Mango', logger);
-// toggleUserState(users, 'Lux', logger);
+// toggleUserState(users, 'Mango', loggerTask);
+// toggleUserState(users, 'Lux', loggerTask);
 
 /*
  * Повинно працювати так
  */
-toggleUserState(users, 'Mango').then(logger);
-toggleUserState(users, 'Lux').then(logger);
+toggleUserState(users, 'Mango').then(loggerTask);
+toggleUserState(users, 'Lux').then(loggerTask);
 
 // ЗАВДАННЯ №3
 const randomIntegerFromInterval = (min, max) => {
